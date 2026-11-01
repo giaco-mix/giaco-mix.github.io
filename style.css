@@ -1,0 +1,163 @@
+:root {
+  --bg: #fafaf7;
+  --surface: #ffffff;
+  --text: #1c1c1a;
+  --muted: #6b6b66;
+  --line: #e6e4dd;
+  --accent: #2f5d50;
+  --accent-ink: #ffffff;
+  --radius: 14px;
+  --font: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #131412;
+    --surface: #1b1d1a;
+    --text: #ecebe6;
+    --muted: #9c9b94;
+    --line: #2c2e2a;
+    --accent: #7fbfa9;
+    --accent-ink: #10201b;
+  }
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+body {
+  margin: 0;
+  font-family: var(--font);
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--bg);
+}
+a { color: inherit; }
+h1, h2, h3 { line-height: 1.2; margin: 0 0 .5rem; }
+p { margin: 0 0 1rem; }
+
+.wrap { max-width: 1040px; margin: 0 auto; padding: 0 20px; }
+
+/* Barra in alto */
+.topbar {
+  position: sticky; top: 0; z-index: 10;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+}
+.nav { display: flex; align-items: center; justify-content: space-between; height: 60px; gap: 16px; }
+.brand { font-weight: 700; text-decoration: none; white-space: nowrap; }
+.nav ul { display: flex; gap: 20px; list-style: none; margin: 0; padding: 0; }
+.nav ul a { text-decoration: none; color: var(--muted); font-size: 15px; }
+.nav ul a:hover { color: var(--text); }
+
+/* Presentazione */
+.hero {
+  padding: 88px 20px 72px;
+  display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 48px;
+}
+.lead a { color: var(--accent); }
+.portrait {
+  width: 260px; height: 260px; object-fit: cover;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+}
+.eyebrow { color: var(--accent); font-weight: 600; letter-spacing: .02em; margin-bottom: .75rem; }
+.hero h1 { font-size: clamp(2.2rem, 6vw, 3.6rem); letter-spacing: -.02em; max-width: 16ch; }
+.lead { font-size: 1.2rem; color: var(--muted); max-width: 60ch; }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+
+.btn {
+  display: inline-block;
+  padding: 11px 20px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+  background: var(--surface);
+  transition: border-color .15s, transform .15s;
+}
+.btn:hover { border-color: var(--accent); transform: translateY(-1px); }
+.btn.primary { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+
+/* Sezioni */
+.section { padding: 64px 20px; border-top: 1px solid var(--line); }
+.section h2 { font-size: 1.9rem; letter-spacing: -.01em; }
+.section-intro { color: var(--muted); margin-bottom: 32px; }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 24px;
+}
+.card h3 { font-size: 1.15rem; }
+.card p:last-child { margin-bottom: 0; color: var(--muted); }
+
+.services { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+.meta { font-size: 14px; color: var(--accent); margin-bottom: .5rem; }
+.btn.small { padding: 8px 16px; font-size: 14px; }
+
+/* Lavoro in evidenza */
+.feature {
+  display: grid; grid-template-columns: 1fr 1.1fr;
+  padding: 0; overflow: hidden; margin-bottom: 20px;
+}
+.feature-img { display: block; border-right: 1px solid var(--line); }
+.feature-img img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: top; }
+.feature-body { padding: 28px; }
+.feature-body > p:not(.meta) { color: var(--muted); }
+.bullets { margin: 0 0 20px; padding-left: 20px; color: var(--muted); }
+.bullets li { margin-bottom: 6px; }
+.bullets strong { color: var(--text); font-weight: 600; }
+.links { display: flex; flex-wrap: wrap; gap: 10px; }
+
+/* Curriculum */
+.cv { display: grid; grid-template-columns: 2fr 1fr; gap: 48px; }
+.cv-title { font-size: .85rem; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); margin: 0 0 16px; }
+.cv-title:not(:first-child) { margin-top: 36px; }
+.timeline { list-style: none; margin: 0; padding: 0; border-left: 2px solid var(--line); }
+.timeline li { position: relative; padding: 0 0 24px 22px; }
+.timeline li::before {
+  content: ""; position: absolute; left: -7px; top: 6px;
+  width: 12px; height: 12px; border-radius: 50%;
+  background: var(--bg); border: 2px solid var(--accent);
+}
+.timeline .when { display: block; font-size: 14px; color: var(--muted); }
+.timeline p { color: var(--muted); margin: 4px 0 0; }
+.tags { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; margin: 0; padding: 0; }
+.tags li { padding: 5px 12px; border: 1px solid var(--line); border-radius: 999px; font-size: 14px; background: var(--surface); }
+.plain { list-style: none; margin: 0 0 28px; padding: 0; }
+.plain li { padding: 4px 0; }
+
+/* Contatti */
+.contacts { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+.contact {
+  display: flex; flex-direction: column; gap: 4px;
+  padding: 22px 24px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  text-decoration: none;
+  transition: border-color .15s, transform .15s;
+}
+.contact:hover { border-color: var(--accent); transform: translateY(-2px); }
+.contact .label { font-size: 13px; text-transform: uppercase; letter-spacing: .08em; color: var(--accent); font-weight: 600; }
+.contact .value { font-weight: 600; overflow-wrap: anywhere; }
+
+.footer { padding: 32px 20px 48px; color: var(--muted); font-size: 14px; border-top: 1px solid var(--line); }
+
+/* Mobile */
+@media (max-width: 720px) {
+  .nav ul { gap: 14px; }
+  .nav ul a { font-size: 14px; }
+  .brand { display: none; }
+  .hero { padding: 40px 20px 48px; grid-template-columns: 1fr; gap: 24px; }
+  .portrait { order: -1; width: 128px; height: 128px; }
+  .feature { grid-template-columns: 1fr; }
+  .feature-img { border-right: 0; border-bottom: 1px solid var(--line); }
+  .feature-body { padding: 22px; }
+  .cv { grid-template-columns: 1fr; gap: 8px; }
+}
