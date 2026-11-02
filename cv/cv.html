@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <title>Giacomo Giordano — Curriculum Vitae</title>
+  <!-- Sorgente del CV. Per rigenerare cv.pdf vedi README.md -->
+  <style>
+    @page { size: A4; margin: 12mm 14mm 10mm; }
+    :root { --accent: #2f5d50; --text: #1c1c1a; --muted: #5f5f5a; --line: #dcdad2; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 9pt; line-height: 1.4; color: var(--text);
+      -webkit-print-color-adjust: exact; print-color-adjust: exact;
+    }
+    h1, h2, h3, p { margin: 0; }
+    a { color: inherit; text-decoration: none; }
+
+    header { display: flex; align-items: center; gap: 18px; padding-bottom: 11px; border-bottom: 2px solid var(--accent); }
+    header img { width: 84px; height: 84px; border-radius: 50%; object-fit: cover; }
+    header h1 { font-size: 22pt; letter-spacing: -.01em; line-height: 1.1; }
+    .role { color: var(--accent); font-weight: 600; font-size: 11pt; margin-top: 2px; }
+    .contacts { display: flex; flex-wrap: wrap; gap: 3px 16px; margin-top: 8px; color: var(--muted); font-size: 9pt; }
+
+    .layout { display: grid; grid-template-columns: 1fr 54mm; gap: 9mm; margin-top: 11px; }
+
+    h2 {
+      font-size: 8.5pt; text-transform: uppercase; letter-spacing: .1em;
+      color: var(--accent); margin: 11px 0 7px; padding-bottom: 3px; border-bottom: 1px solid var(--line);
+    }
+    section:first-child h2 { margin-top: 0; }
+
+    .item { display: grid; grid-template-columns: 28mm 1fr; gap: 0 8px; margin-bottom: 7px; break-inside: avoid; }
+    .when { color: var(--muted); font-size: 8.2pt; padding-top: 1px; white-space: nowrap; }
+    .item h3 { font-size: 9.3pt; font-weight: 600; }
+    .org { color: var(--muted); }
+    .item p:not(.org) { margin-top: 2px; }
+
+    aside ul { list-style: none; margin: 0; padding: 0; }
+    aside li { margin-bottom: 4px; }
+    aside .label { display: block; font-weight: 600; }
+    aside .sub { color: var(--muted); font-size: 8.8pt; }
+    .tags { display: flex; flex-wrap: wrap; gap: 4px; }
+    .tags li { margin: 0; padding: 1px 7px; border: 1px solid var(--line); border-radius: 99px; font-size: 8.5pt; }
+    .para { color: var(--text); }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="../img/giacomo.jpg" alt="">
+    <div>
+      <h1>Giacomo Giordano</h1>
+      <p class="role">Sviluppo Software e Consulenza IT · CTO e co-founder di Hoomie</p>
+      <p class="contacts">
+        <a href="mailto:giordano.giacomo.paolo@gmail.com">giordano.giacomo.paolo@gmail.com</a>
+        <a href="https://wa.me/393496339332">+39 349 633 9332</a>
+        <a href="https://giaco-mix.github.io">giaco-mix.github.io</a>
+        <span>Cuneo</span>
+      </p>
+    </div>
+  </header>
+
+  <div class="layout">
+    <main>
+      <section>
+        <h2>Esperienze professionali</h2>
+
+        <div class="item">
+          <span class="when">04/2025 — oggi</span>
+          <div>
+            <h3>CTO e co-founder</h3>
+            <p class="org">Hoomie SRL, Cuneo · lavoro autonomo</p>
+            <p>Analisi e sviluppo software e web della piattaforma Hoomie (sito e app iOS/Android per fuorisede): prodotto e infrastruttura.</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <span class="when">11/2022 — 03/2025</span>
+          <div>
+            <h3>Insegnante supplente</h3>
+            <p class="org">ITIS Delpozzo e Liceo Scientifico Peano, Cuneo · tempo determinato</p>
+            <p>Informatica, Sistemi e Reti, Tecnologie Informatiche, Matematica e Fisica.</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <span class="when">03/2020 — oggi</span>
+          <div>
+            <h3>System Administration &amp; IT Support</h3>
+            <p class="org">Studio Tecnico Giordano Luciano, Limone Piemonte · lavoro autonomo</p>
+            <p>Assistenza informatica per uno studio di amministrazione condominiale.</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <span class="when">10/2021 — 10/2022</span>
+          <div>
+            <h3>System Administrator</h3>
+            <p class="org">Cooperativa Emmanuele, Cuneo</p>
+            <p>Gestione utenti, installazione licenze software, configurazione di DNS sicuro per la protezione della rete, controllo e miglioramento dell'hardware.</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <span class="when">10/2022 — oggi</span>
+          <div>
+            <h3>Addetto all'accoglienza</h3>
+            <p class="org">PoMa srls, Cuneo · lavoro saltuario</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <span class="when">04/2019 — 09/2019</span>
+          <div>
+            <h3>Sviluppatore mobile iOS (Objective-C)</h3>
+            <p class="org">FeedbackItalia, Moncalieri · tirocinio</p>
+            <p>Sviluppo delle funzioni di condivisione della posizione all'interno di un'app di videochat per iPhone.</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <span class="when">06/2018 — 10/2018</span>
+          <div>
+            <h3>Tecnico di illuminotecnica teatrale</h3>
+            <p class="org">Show Time Music Service, Savigliano</p>
+            <p>Montaggio e smontaggio di impianti luci e audio per concerti e spettacoli.</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Istruzione e formazione</h2>
+
+        <div class="item">
+          <span class="when">2021 — in corso</span>
+          <div>
+            <h3>Laurea magistrale in Ingegneria Informatica</h3>
+            <p class="org">Politecnico di Torino</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <span class="when">2015 — 2021</span>
+          <div>
+            <h3>Laurea in Ingegneria Informatica</h3>
+            <p class="org">Politecnico di Torino</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <span class="when">2020 — 2021</span>
+          <div>
+            <h3>InnoVentureLab</h3>
+            <p class="org">Università Bocconi e Politecnico di Milano</p>
+            <p>Corso di formazione e pre-accelerazione per startup innovative (9 mesi).</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <span class="when">2017 — 2018</span>
+          <div>
+            <h3>Tecnico Schermistico di Primo Livello</h3>
+            <p class="org">Federazione Italiana Scherma · qualifica professionale</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <span class="when">2015</span>
+          <div>
+            <h3>Maturità scientifica, indirizzo bilingue</h3>
+            <p class="org">Liceo Scientifico Peano, Cuneo</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Altro</h2>
+        <p>Patente B, automunito · Disponibile a trasferte in Italia e all'estero</p>
+      </section>
+    </main>
+
+    <aside>
+      <section>
+        <h2>Competenze tecniche</h2>
+        <ul>
+          <li><span class="label">Linguaggi</span><span class="sub">C, Java, Objective-C, HTML/PHP, MySQL; base di Bash, Assembly</span></li>
+          <li><span class="label">Mobile e web</span><span class="sub">FlutterFlow, Firebase, Ionic, Angular.js</span></li>
+          <li><span class="label">Database</span><span class="sub">MySQL, MongoDB</span></li>
+          <li><span class="label">Sistemi</span><span class="sub">Linux (Ubuntu), Windows, Git</span></li>
+          <li><span class="label">IT e hardware</span><span class="sub">Reti e DNS, assemblaggio e riparazione PC, installazione OS, backup e cloning, Raspberry Pi</span></li>
+          <li><span class="label">Altro</span><span class="sub">Office, Gimp, Blender, ShotCut, MatLab, MagicQ</span></li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Lingue</h2>
+        <ul>
+          <li><span class="label">Italiano</span><span class="sub">madrelingua</span></li>
+          <li><span class="label">Francese</span><span class="sub">B2 · DELF B2 (2014)</span></li>
+          <li><span class="label">Inglese</span><span class="sub">B2 · Cambridge First (2014)</span></li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Esperienze all'estero</h2>
+        <ul>
+          <li><span class="label">Orange, Francia</span><span class="sub">Scambio culturale e linguistico, Lycée de l'Arc (2012 — 2015)</span></li>
+          <li><span class="label">Dublino, Irlanda</span><span class="sub">Vacanza-studio in lingua inglese (2012)</span></li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Volontariato</h2>
+        <ul>
+          <li><span class="label">Animatore ed educatore</span><span class="sub">Parrocchia San Paolo, Cuneo (2011 — oggi): oratorio estivo, incontri di formazione, campi estivi e invernali</span></li>
+          <li><span class="label">Aiuto istruttore</span><span class="sub">Circolo Schermistico Cuneo e A.S.D. Fuma che 'nduma (2011 — 2015): scherma, giocoleria e acrobatica</span></li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Soft skill</h2>
+        <p class="para">Ottime capacità di cooperazione e di apprendimento rapido. Coordinamento di team, capacità relazionali e comunicative maturate in anni di animazione e nel mondo sportivo e artistico. A mio agio davanti a un pubblico.</p>
+      </section>
+    </aside>
+  </div>
+
+</body>
+</html>

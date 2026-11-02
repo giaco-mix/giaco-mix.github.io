@@ -8,7 +8,8 @@ Pubblicato gratis con **GitHub Pages**.
 ```
 index.html   contenuti (testi, servizi, lavori, CV, contatti)
 style.css    grafica (colori in cima al file, nella sezione :root)
-cv.pdf       il CV scaricabile (da aggiungere)
+cv.pdf       il CV scaricabile, generato da cv/cv.html
+cv/cv.html   sorgente del CV (senza dati personali)
 img/         immagini dei lavori (facoltativa)
 ```
 
@@ -16,7 +17,7 @@ img/         immagini dei lavori (facoltativa)
 
 Apri `index.html` e sostituisci i testi segnaposto ("Nome Cognome", "Servizio uno", ecc.).
 - **WhatsApp**: nel link `https://wa.me/390000000000` metti il numero con prefisso, senza `+` né spazi.
-- **CV**: salva il PDF in questa cartella come `cv.pdf`.
+- **CV**: modifica `cv/cv.html`, poi rigenera il PDF con il comando qui sotto.
 - **Colore principale**: cambia `--accent` in `style.css`.
 
 Anteprima in locale:
@@ -26,6 +27,12 @@ python3 -m http.server 8765
 ```
 
 poi apri http://localhost:8765
+
+Rigenerare `cv.pdf` (serve Google Chrome):
+
+```bash
+"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless=new --no-pdf-header-footer --print-to-pdf="$PWD/cv.pdf" "file://$PWD/cv/cv.html"
+```
 
 ## Pubblicare gratis su GitHub Pages
 
